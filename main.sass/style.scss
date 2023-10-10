@@ -1,0 +1,105 @@
+@import url(../nav.sass/style.css);
+@import url(../header.sass/style.css);
+@import url(../section.sass/style.css);
+@import url(../article.sass/style.css);
+@import url(../main.sass/style.css);
+@import url(../footer.sass/style.css);
+@import url(../figure.sass/style.css);
+
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+%center {
+    display: flex;
+    align-self: center;
+}
+
+@mixin change_fonts($color, $f_size, $f_weight, $family) {
+    color: $color;
+    font-size: $f_size;
+    font-weight: $f_weight;
+    font-family: $family;
+}
+
+@mixin change_btn($color, $bg, $f_size, $pad, $border, $radius) {
+    color: $color;
+    background: $bg;
+    font-size: $f_size;
+    padding: $pad;
+    border: $border;
+    border-radius: $radius;
+}
+
+@mixin change__wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+main {
+    .main__text {
+        margin: 0 auto;
+        margin-top: 150px;
+
+        .main__p {
+            @include change_fonts(#fff, 40px, 700, Poppins);
+            text-align: center;
+            max-width: 721px;
+            margin: 0 auto;
+        }
+
+        .main__p_2 {
+            @include change_fonts(#fff, 16px, 500, Poppins);
+            text-align: center;
+            max-width: 657px;
+            margin: 0 auto;
+            margin-top: 16px;
+        }
+    }
+
+    .container {
+        .main__contant {
+            margin-top: 50px;
+
+            .main__dis__icon {
+                @extend %center;
+                gap: 16px;
+
+                .main_btn_mini {
+                    @include change_btn(#1F2E35, #02897A, 20px, 0px, none, 50%);
+                    @include change__wh(24px, 24px);
+                    cursor: pointer;
+                }
+
+                .main_icon_p {
+                    @include change_fonts(#fff, 18px, 400, Poppins);
+                }
+
+                .main_icon_p_2 {
+                    @include change_fonts(#22343D, 18px, 400, Poppins);
+                }
+            }
+
+            .main__hr {
+                max-width: 100%;
+                height: 1px;
+                margin-top: 22px;
+                margin-bottom: 16px;
+            }
+
+            .main__icon_p {
+                @include change_fonts(#fff, 16px, 400, Poppins);
+                max-width: 100%;
+                margin-top: 14px;
+            }
+        }
+    }
+}

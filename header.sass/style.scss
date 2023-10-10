@@ -1,0 +1,244 @@
+%center {
+    display: flex;
+    align-self: center;
+}
+
+@mixin change_fonts($color, $f_size, $f_weight, $family) {
+    color: $color;
+    font-size: $f_size;
+    font-weight: $f_weight;
+    font-family: $family;
+}
+
+@mixin change_btn($color, $bg, $f_size, $pad, $border, $radius) {
+    color: $color;
+    background: $bg;
+    font-size: $f_size;
+    padding: $pad;
+    border: $border;
+    border-radius: $radius;
+}
+
+@mixin change__wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+.container {
+    margin: 0px 150px;
+}
+
+header {
+
+    .haeder__text {
+        margin: 0 auto;
+
+        .haeder__h1 {
+            @include change_fonts(#fff, 24px, 600, Poppins);
+            text-align: center;
+        }
+
+        .haeder__p {
+            @include change_fonts(#fff, 40px, 700, Poppins);
+            text-align: center;
+            max-width: 721px;
+            margin: 0 auto;
+        }
+
+        .header__p_2 {
+            @include change_fonts(#fff, 16px, 500, Poppins);
+            text-align: center;
+            max-width: 5361px;
+            margin: 0 auto;
+            margin-top: 16px;
+        }
+    }
+
+    .container {
+
+        .header__contant {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 50px;
+
+            .header__box {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                align-items: center;
+                width: 322px;
+                height: 456px;
+                border-radius: 8px;
+                background-color: #fff;
+                box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.25);
+
+                .header__box_h3 {
+                    @include change_fonts(#22343D, 24px, 700, Poppins);
+                    padding-top: 24px;
+                }
+
+                .box__p {
+                    @include change_fonts(#22343D, 16px, 400, Poppins);
+                    padding-top: 8px;
+                }
+
+                .box__dis__h_p {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    .box__p_3 {
+                        @include change_fonts(#AFAFAF, 16px, 400, Poppins);
+                    }
+
+                    .header__h2 {
+                        @include change_fonts(#02897A, 76px, 700, Poppins);
+                        padding-top: 16px;
+                    }
+
+                    .header__h6 {
+                        @include change_fonts(#02897A, 24px, 700, Poppins);
+                    }
+                }
+
+                .header__h5 {
+                    @include change_fonts(#22343D, 16px, 500, Poppins);
+                }
+
+                .header__btn {
+                    @include change_btn(#fff, #02897A, 18px, 11px 20px, none, 8px);
+                    cursor: pointer;
+                }
+            }
+
+            .header__box_2 {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                align-items: center;
+                width: 322px;
+                height: 456px;
+                border-radius: 8px;
+                background-color: #02897A;
+                box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.25);
+
+                .header__box_h3_2 {
+                    @include change_fonts(#fff, 24px, 700, Poppins);
+                    padding-top: 24px;
+                }
+
+                .box__p_2 {
+                    @include change_fonts(#fff, 16px, 400, Poppins);
+                    padding-top: 8px;
+                }
+
+                .box__dis__h_p {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    .box__p_3_2 {
+                        @include change_fonts(#AFAFAF, 16px, 400, Poppins);
+                    }
+
+                    .header__h2_2 {
+                        @include change_fonts(#fff, 76px, 700, Poppins);
+                        padding-top: 16px;
+                    }
+
+                    .header__h6_2 {
+                        @include change_fonts(#fff, 24px, 700, Poppins);
+                    }
+                }
+
+                .header__h5_2 {
+                    @include change_fonts(#fff, 16px, 500, Poppins);
+                }
+
+                .header__btn_2 {
+                    @include change_btn(#02897A, #fff, 18px, 11px 20px, none, 8px);
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+    }
+}
+
+@media (max-width:1200px) and (min-width:990px) {
+    .header__contant{
+        flex-wrap: wrap;
+        .header__box_2{
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        .header__box{
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (max-width:989px) and (min-width:760px) {
+    .header__contant{
+        flex-wrap: wrap;
+        .header__box_2{
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        .header__box{
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (max-width:759px) and (min-width:630px) {
+    .header__contant{
+        flex-wrap: wrap;
+        .header__box_2{
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        .header__box{
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (max-width:629px) and (min-width:460px) {
+    .container {
+        margin: 0px 100px;
+    }
+    .header__contant{
+        flex-wrap: wrap;
+        .header__box_2{
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        .header__box{
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (max-width:459px) and (min-width:0px) {
+    .container {
+        margin: 0px 50px;
+    }
+    .header__contant{
+        flex-wrap: wrap;
+        .header__box_2{
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        .header__box{
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+    }
+}

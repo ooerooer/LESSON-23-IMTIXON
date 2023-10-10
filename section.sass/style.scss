@@ -1,0 +1,69 @@
+%center {
+    display: flex;
+    align-self: center;
+}
+
+@mixin change_fonts($color, $f_size, $f_weight, $family) {
+    color: $color;
+    font-size: $f_size;
+    font-weight: $f_weight;
+    font-family: $family;
+}
+
+@mixin change_btn($color, $bg, $f_size, $pad, $border, $radius) {
+    color: $color;
+    background: $bg;
+    font-size: $f_size;
+    padding: $pad;
+    border: $border;
+    border-radius: $radius;
+}
+
+@mixin change__wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+section {
+
+    .section__text {
+        margin: 0 auto;
+        margin-top: 150px;
+        max-width: 100%;
+        max-height: 100%;
+        background: #22343D;
+        padding-top: 53px;
+
+        .section__h1 {
+            @include change_fonts(#fff, 24px, 600, Poppins);
+            text-align: center;
+        }
+
+        .section__p {
+            @include change_fonts(#fff, 40px, 700, Poppins);
+            text-align: center;
+            max-width: 721px;
+            margin: 0 auto;
+        }
+
+        .section__p_2 {
+            @include change_fonts(#fff, 16px, 500, Poppins);
+            text-align: center;
+            max-width: 657px;
+            margin: 0 auto;
+            margin-top: 16px;
+        }
+
+        .btn__center {
+            display: flex;
+            justify-content: center;
+            padding-top: 32px;
+            padding-bottom: 32px;
+
+            .section__btn {
+                cursor: pointer;
+                @include change_btn(#fff, #02897A, 18px, 11px 20px, none, 8px);
+            }
+        }
+    }
+}

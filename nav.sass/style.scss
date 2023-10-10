@@ -1,0 +1,167 @@
+%center {
+    display: flex;
+    align-self: center;
+}
+
+@mixin change_fonts($color, $f_size, $f_weight, $family) {
+    color: $color;
+    font-size: $f_size;
+    font-weight: $f_weight;
+    font-family: $family;
+}
+
+@mixin change_btn($color, $bg, $f_size, $pad, $border, $radius) {
+    color: $color;
+    background: $bg;
+    font-size: $f_size;
+    padding: $pad;
+    border: $border;
+    border-radius: $radius;
+}
+
+@mixin change__wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+body {
+    background-color: #1F2E35;
+}
+
+.container {
+    margin: 0px 144px;
+
+    .nav__contant {
+        @extend %center;
+        justify-content: space-between;
+        margin-top: 23px;
+
+        .bars {
+            font-size: 22px;
+            color: #fff;
+            display: none
+        }
+
+        .dis__icon_h {
+            @extend %center;
+            gap: 16px;
+
+            .nav__img_1 {
+                @include change__wh(40px, 36px)
+            }
+
+            .nav__h1 {
+                @include change_fonts(#fff, 30px, 700, Poppins);
+            }
+
+        }
+
+        .nav__contant_2 {
+            @extend %center;
+            gap: 25px;
+
+            .nav__ul {
+                @extend %center;
+                gap: 25px;
+
+                .nav__li {
+                    @include change_fonts(#fff, 16px, 400, Poppins);
+                    list-style: none;
+                }
+
+                .nav__a {
+                    @include change_fonts(#fff, 16px, 400, Poppins);
+                    text-decoration: none;
+                }
+            }
+
+            .nav__btn {
+                @include change_btn(#fff, none, 16px, 10px 25px, 1px solid #BCD0E5, 4px);
+                cursor: pointer
+            }
+
+            .nav__btn_2 {
+                @include change_btn(#fff, #02897A, 16px, 10px 25px, none, 4px);
+                cursor: pointer;
+            }
+
+            .nav__img_2 {
+                @include change__wh(32px, 32px)
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) and (min-width:990px) {
+    .container {
+        .nav__contant {
+            .nav__contant_2 {
+                display: none;
+            }
+
+            .bars {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width:989px) and (min-width:760px) {
+    .container {
+        .nav__contant {
+            .nav__contant_2 {
+                display: none;
+            }
+
+            .bars {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width:759px) and (min-width:630px) {
+    .container {
+        .nav__contant {
+            .nav__contant_2 {
+                display: none;
+            }
+
+            .bars {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width:629px) and (min-width:459px) {
+    .container {
+        margin: 0px 100px;
+
+        .nav__contant {
+            .nav__contant_2 {
+                display: none;
+            }
+
+            .bars {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width:458px) and (min-width:0px) {
+    .container {
+        margin: 0px 50px;
+
+        .nav__contant {
+            .nav__contant_2 {
+                display: none;
+            }
+
+            .bars {
+                display: block;
+            }
+        }
+    }
+}

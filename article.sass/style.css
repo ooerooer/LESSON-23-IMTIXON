@@ -1,0 +1,99 @@
+article .container .article__h1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Poppins;
+  text-align: center;
+  margin-top: 150px;
+}
+article .container .article__contant {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+article .container .article__contant .article__right .article__img {
+  width: 428px;
+}
+article .container .article__contant .article__right .article__img_2 {
+  display: none;
+}
+article .container .article__contant .article__left .a__box {
+  margin-top: 40px;
+}
+article .container .article__contant .article__left .a__box .dis__icon_text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+article .container .article__contant .article__left .a__box .dis__icon_text .article__h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Poppins;
+}
+article .container .article__contant .article__left .a__box .dis__icon_text .article__img {
+  width: 50px;
+}
+article .container .article__contant .article__left .a__box .article__p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Poppins;
+  max-width: 533px;
+  margin-top: 16px;
+}
+
+@media (max-width: 1200px) and (min-width: 990px) {
+  .article__contant {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+@media (max-width: 998px) and (min-width: 770px) {
+  .article__contant {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+@media (max-width: 769px) and (min-width: 630px) {
+  .article__contant {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+@media (max-width: 629px) and (min-width: 450px) {
+  article .container .article__contant {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  article .container .article__contant .article__right .article__img {
+    display: none;
+  }
+  article .container .article__contant .article__right .article__img_2 {
+    display: block;
+    width: 352px;
+  }
+}
+@media (max-width: 449px) and (min-width: 0px) {
+  article .container .article__contant {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  article .container .article__contant .article__right .article__img {
+    display: none;
+  }
+  article .container .article__contant .article__right .article__img_2 {
+    display: block;
+    width: 252px;
+  }
+}/*# sourceMappingURL=style.css.map */
